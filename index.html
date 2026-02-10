@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MotoMash – Motos Deportivas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏍️ MotoMash</h1>
+<p>Elige la marca que prefieras según el criterio seleccionado</p>
+
+<div class="container">
+
+    <!-- CONFIGURACIÓN -->
+    <div class="panel left">
+        <h2>⚙️ Configuración</h2>
+
+        <select id="criterio">
+            <option>Historia</option>
+            <option>Calidad</option>
+            <option>Recorrido</option>
+            <option>Duración</option>
+            <option>Diversión</option>
+        </select>
+
+        <div class="botones-config">
+            <button onclick="nuevoDuelo()">🔄 Nuevo duelo</button>
+            <button onclick="reiniciar()">♻️ Reiniciar</button>
+        </div>
+    </div>
+
+    <!-- VOTACIÓN -->
+    <div class="panel center">
+        <h2>🔥 Duelo</h2>
+
+        <div id="comparison">
+            <button id="optionA" onclick="choose('A')"></button>
+            <span class="vs">VS</span>
+            <button id="optionB" onclick="choose('B')"></button>
+        </div>
+
+        <button class="excel" onclick="descargarExcel()">📥 Votos Excel</button>
+    </div>
+
+    <!-- RANKING -->
+    <div class="panel right">
+        <h2>📊 Ranking</h2>
+        <table id="ranking">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Marca</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
